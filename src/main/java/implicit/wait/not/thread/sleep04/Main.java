@@ -14,8 +14,8 @@ public class Main {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://colorlib.com/etc/bwiz/colorlib-wizard-1/index.html");
-
 		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("charles");
 		driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("babage");
 		driver.findElement(By.xpath("//input[@placeholder='Your Email']")).sendKeys("someone@somewhere.com");
@@ -27,8 +27,11 @@ public class Main {
 		 * before that so we need to say to driver to wait for the page loading
 		 * dont use Thread.sleep()// this will cause explicit wait and it will slower the code
 		 * execution
+		 * 
+		 * also implicit wait only work for the immediate presence of elemen.
+		 * 
+		 *  implicit wait need only declare once it will do all wait for each element.
 		 */
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//input[@placeholder='Address']")).sendKeys("some address");
 		driver.quit();
 	}
