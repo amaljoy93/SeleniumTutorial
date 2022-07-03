@@ -40,9 +40,11 @@ class TestParallel {
 		} else if (browser.equals("chrome")) {
 			cap = new ChromeOptions();
 		}
-		driver.set(new RemoteWebDriver(new URL("http://192.168.1.73:4444"), cap));
+		driver.set(new RemoteWebDriver(new URL("http://192.168.1.70:4444"), cap));
 		getDriver().get("https://google.com");
 		Thread.sleep(3000);
 		getDriver().quit();
 	}
 }
+
+// same process for selenium grid hub and distributed
