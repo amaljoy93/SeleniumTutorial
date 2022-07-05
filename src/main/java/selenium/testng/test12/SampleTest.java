@@ -1,4 +1,4 @@
-package selenium.testng.test;
+package selenium.testng.test12;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Main {
+public class SampleTest {
 
 	public static void main(String[] args) {
 		TestNG runner=new TestNG();
