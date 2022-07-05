@@ -28,4 +28,10 @@ class TestNgTest {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://google.com");
 	}
+	@Test
+	public void SampleTest_02() {
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://google.com");
+	}
 }
