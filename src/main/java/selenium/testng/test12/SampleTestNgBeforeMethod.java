@@ -26,7 +26,7 @@ public class SampleTestNgBeforeMethod {
 }
 
 class TestNgTest01 {
-	public static WebDriver driver;
+	WebDriver driver;
 	@BeforeMethod
 	public void setBrowserConfig() {
 		WebDriverManager.chromedriver().setup();
